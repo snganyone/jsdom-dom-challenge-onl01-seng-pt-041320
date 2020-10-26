@@ -68,5 +68,4 @@ submit.addEventListener("click", (e) => {
 
     para.innerHTML = comment.value;
     form.appendChild(para);
-    e.target.reset;
 });
