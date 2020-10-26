@@ -3,6 +3,8 @@ let plus = document.getElementById("plus");
 let heart = document.getElementById("heart");
 let pause = document.getElementById("pause");
 
+let likes = document.getElementsByClassName("likes");
+
 let counter = document.getElementById("counter");
 let num = 0
 
@@ -14,4 +16,27 @@ minus.addEventListener("click", () => {
 plus.addEventListener("click", () => {
     num++;
     counter.innerHTML = num;
+});
+
+heart.addEventListener("click", () => {
+    let currentcount = counter;
+    let currentlike = likes.querySelector(`#li-${currentcount}`);
+    if(currentlike != null){
+        num++;
+        li.innerHTML = `${currentcount} has been clicked ${num} times`;
+    } else{
+        let num = 1;
+        let li = document.createElement('li');
+        li.id = `li-${currentcount}`;
+        li.innerHTML = `${currentcount} has been clicked ${num} times`;
+        likes.appendChild(li);
+    }
+});
+
+pause.addEventListener("click", () => {
+    if(pause.innerHTML != "resume"){
+        pause.innerHTML = "resume";
+    }else{
+        pause.innerHTML = "pause";
+    }
 });
