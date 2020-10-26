@@ -20,18 +20,7 @@ plus.addEventListener("click", () => {
 });
 
 heart.addEventListener("click", () => {
-    let currentcount = counter;
-    // let currentlike = likes.querySelector(`#li-${currentcount}`);
-    // if(currentlike != null){
-    //     num++;
-    //     li.innerHTML = `${currentcount} has been clicked ${num} times`;
-    // } else{
-    //     let num = 1;
-    //     let li = document.createElement('li');
-    //     li.id = `li-${currentcount}`;
-    //     li.innerHTML = `${currentcount} has been clicked ${num} times`;
-    //     likes.appendChild(li);
-    // }
+
 });
 
 pause.addEventListener("click", () => {
