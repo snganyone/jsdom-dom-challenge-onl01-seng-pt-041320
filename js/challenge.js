@@ -1,3 +1,5 @@
+//button group
+
 let minus = document.getElementById("minus");
 let plus = document.getElementById("plus");
 let heart = document.getElementById("heart");
@@ -6,19 +8,23 @@ let submit = document.getElementById("submit");
 
 let likes = document.getElementsByClassName("likes");
 
+//Timer
 let counter = document.getElementById("counter");
 let num = 0
 
+//Minus action
 minus.addEventListener("click", () => {
     num--;
     counter.innerHTML = num;
 });
 
+//Plus Action
 plus.addEventListener("click", () => {
     num++;
     counter.innerHTML = num;
 });
 
+//Like Action
 heart.addEventListener("click", () => {
     let c = parseInt(counter.innerHTML)
     let currentcount = c;
@@ -36,6 +42,7 @@ heart.addEventListener("click", () => {
     likes.appendChild(li);
 });
 
+//Pause Timer Action
 pause.addEventListener("click", () => {
     let buttons = [plus, minus, heart, submit];
     if(pause.innerHTML != "resume"){
