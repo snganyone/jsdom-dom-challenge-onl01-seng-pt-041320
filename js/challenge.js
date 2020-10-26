@@ -34,7 +34,11 @@ heart.addEventListener("click", () => {
 });
 
 pause.addEventListener("click", () => {
+    let buttons = document.querySelectorAll(".button");
     if(pause.innerHTML != "resume"){
+        for(let el of buttons){
+            el.disabled = true;
+        }
         pause.innerHTML = "resume";
     }else{
         pause.innerHTML = "pause";
