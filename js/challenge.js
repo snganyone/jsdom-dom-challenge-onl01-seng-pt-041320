@@ -45,6 +45,7 @@ pause.addEventListener("click", () => {
         for(let el of buttons){
             el.disabled = false;
         }
+        let timoute = window.setTimeout(window.alert, 1000, "resume");
         pause.innerHTML = "pause";
     }
 });
