@@ -1,5 +1,4 @@
 //button group
-
 let minus = document.getElementById("minus");
 let plus = document.getElementById("plus");
 let heart = document.getElementById("heart");
@@ -57,4 +56,17 @@ pause.addEventListener("click", () => {
         let timoute = window.setTimeout(window.alert, 1000, "resume");
         pause.innerHTML = "pause";
     }
+});
+
+//Comment Action
+
+submit.addEventListener("click", (e) => {
+    e.preventDefault();
+    let comment = document.getElementById('comment-input');
+    let para = document.createElement('p');
+    let form = document.querySelector('form');
+
+    para.innerHTML = comment.value;
+    form.appendChild(para);
+    e.target.reset;
 });
