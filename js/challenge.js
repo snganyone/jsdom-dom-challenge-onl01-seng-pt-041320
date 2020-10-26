@@ -2,6 +2,7 @@ let minus = document.getElementById("minus");
 let plus = document.getElementById("plus");
 let heart = document.getElementById("heart");
 let pause = document.getElementById("pause");
+let submit = document.getElementById("submit");
 
 let likes = document.getElementsByClassName("likes");
 
@@ -20,27 +21,28 @@ plus.addEventListener("click", () => {
 
 heart.addEventListener("click", () => {
     let currentcount = counter;
-    let currentlike = likes.querySelector(`#li-${currentcount}`);
-    if(currentlike != null){
-        num++;
-        li.innerHTML = `${currentcount} has been clicked ${num} times`;
-    } else{
-        let num = 1;
-        let li = document.createElement('li');
-        li.id = `li-${currentcount}`;
-        li.innerHTML = `${currentcount} has been clicked ${num} times`;
-        likes.appendChild(li);
-    }
+    // let currentlike = likes.querySelector(`#li-${currentcount}`);
+    // if(currentlike != null){
+    //     num++;
+    //     li.innerHTML = `${currentcount} has been clicked ${num} times`;
+    // } else{
+    //     let num = 1;
+    //     let li = document.createElement('li');
+    //     li.id = `li-${currentcount}`;
+    //     li.innerHTML = `${currentcount} has been clicked ${num} times`;
+    //     likes.appendChild(li);
+    // }
 });
 
 pause.addEventListener("click", () => {
-    let buttons = document.querySelectorAll(".button");
-    if(pause.innerHTML != "resume"){
-        for(let el of buttons){
+    let buttons = [plus, minus, heart, submit];
+    for (let el of buttons) {
+        if (pause.innerHTML != "resume") {
             el.disabled = true;
-        }
-        pause.innerHTML = "resume";
-    }else{
-        pause.innerHTML = "pause";
+            pause.innerHTML = "resume";
+        } else {
+            el.disabled = false;
+            pause.innerHTML = "pause";
+        }   
     }
 });
