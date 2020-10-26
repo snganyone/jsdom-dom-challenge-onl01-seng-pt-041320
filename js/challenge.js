@@ -37,12 +37,8 @@ heart.addEventListener("click", () => {
 pause.addEventListener("click", () => {
     let buttons = [plus, minus, heart, submit];
     for (let el of buttons) {
-        if (pause.innerHTML != "resume") {
-            el.disabled = true;
-            pause.innerHTML.trim();
+        if (pause.innerHTML.trim() == "pause") {
             pause.innerHTML = "resume";
-        } else {
-            pause.innerHTML = "pause";
-        }   
+        } 
     }
 });
